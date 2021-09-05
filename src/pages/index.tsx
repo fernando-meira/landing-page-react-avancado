@@ -2,6 +2,7 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 
 import client from 'graphql/client';
+import { LandingPageProps } from 'types/api';
 import GET_LANDING_PAGE from 'graphql/queries/getLandingPage';
 
 import Footer from 'components/Footer';
@@ -17,9 +18,9 @@ import SectionReviews from 'components/SectionReviews';
 import SectionConcepts from 'components/SectionConcepts';
 import SectionAboutProject from 'components/SectionAboutProject';
 
-const Index = () => (
+const Index = ({ logo }: LandingPageProps) => (
   <>
-    <SectionHero />
+    <SectionHero logo={logo} />
     <SectionAboutProject />
     <SectionTech />
     <SectionConcepts />
