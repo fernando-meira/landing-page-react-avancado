@@ -1,3 +1,5 @@
+import SectionAboutProject from 'components/SectionAboutProject';
+
 export type ImageProps = {
   url: string;
   alternativeText: string;
@@ -15,7 +17,14 @@ export type HeaderProps = {
   button: ButtonProps;
 };
 
+export type SectionAboutProjectProps = {
+  title: string;
+  image: ImageProps;
+  description: string;
+};
+
 export type LandingPageProps = {
   logo: ImageProps;
   header: HeaderProps;
+  sectionAboutProject: SectionAboutProjectProps;
 };
