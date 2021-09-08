@@ -15,7 +15,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
-  fragment landingPage on LandingPage {
+  fragment headerPage on LandingPage {
     header {
       title
       description
@@ -28,11 +28,23 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionAboutProject on LandingPage {
+    sectionAboutProject {
+      title
+      description
+      image {
+        ...imageData
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
 
-      ...landingPage
+      ...headerPage
+
+      ...sectionAboutProject
     }
   }
 `;
