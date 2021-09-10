@@ -12,7 +12,6 @@ const SectionAboutProject = ({
   description,
   image,
 }: SectionAboutProjectProps) => {
-  console.log(description);
   return (
     <S.Wrapper>
       <Container>
@@ -22,7 +21,9 @@ const SectionAboutProject = ({
           <div>
             <Heading>{title}</Heading>
 
-            <S.Text dangerouslySetInnerHTML={{ __html: description }} />
+            <div dangerouslySetInnerHTML={{ __html: description }} />
+
+            {/* <S.Text dangerouslySetInnerHTML={{ __html: description }} /> */}
           </div>
         </S.Container>
       </Container>
