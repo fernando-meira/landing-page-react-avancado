@@ -1,5 +1,3 @@
-import SectionAboutProject from 'components/SectionAboutProject';
-
 export type ImageProps = {
   url: string;
   alternativeText: string;
@@ -8,6 +6,11 @@ export type ImageProps = {
 type ButtonProps = {
   url: string;
   label: string;
+};
+
+type techIconsProps = {
+  title: string;
+  icon: ImageProps;
 };
 
 export type HeaderProps = {
@@ -23,8 +26,14 @@ export type SectionAboutProjectProps = {
   description: string;
 };
 
+export type SectionTechProps = {
+  title: string;
+  techIcons: techIconsProps[];
+};
+
 export type LandingPageProps = {
   logo: ImageProps;
   header: HeaderProps;
+  sectionTech: SectionTechProps;
   sectionAboutProject: SectionAboutProjectProps;
 };

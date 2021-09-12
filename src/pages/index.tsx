@@ -18,11 +18,16 @@ import SectionReviews from 'components/SectionReviews';
 import SectionConcepts from 'components/SectionConcepts';
 import SectionAboutProject from 'components/SectionAboutProject';
 
-const Index = ({ logo, header, sectionAboutProject }: LandingPageProps) => (
+const Index = ({
+  logo,
+  header,
+  sectionTech,
+  sectionAboutProject,
+}: LandingPageProps) => (
   <>
     <SectionHero logo={logo} header={header} />
     <SectionAboutProject {...sectionAboutProject} />
-    <SectionTech />
+    <SectionTech {...sectionTech} />
     <SectionConcepts />
     <SectionModules />
     <SectionAgenda />
