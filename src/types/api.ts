@@ -13,6 +13,10 @@ type techIconsProps = {
   icon: ImageProps;
 };
 
+type conceptsProps = {
+  title: string;
+};
+
 export type HeaderProps = {
   title: string;
   image: ImageProps;
@@ -26,6 +30,11 @@ export type SectionAboutProjectProps = {
   description: string;
 };
 
+export type SectionConceptsProps = {
+  title: string;
+  concepts: conceptsProps[];
+};
+
 export type SectionTechProps = {
   title: string;
   techIcons: techIconsProps[];
@@ -35,5 +44,6 @@ export type LandingPageProps = {
   logo: ImageProps;
   header: HeaderProps;
   sectionTech: SectionTechProps;
+  sectionConcepts: SectionConceptsProps;
   sectionAboutProject: SectionAboutProjectProps;
 };
