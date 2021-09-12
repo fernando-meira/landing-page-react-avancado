@@ -1,15 +1,13 @@
 import React from 'react';
 
-import { getImageUrl } from 'utils/getImageUrl';
 import Heading from 'components/Heading';
 import Container from 'components/Container';
+import { getImageUrl } from 'utils/getImageUrl';
 
 import * as S from './styles';
 import { SectionTechProps } from 'types/api';
 
 const SectionTech = ({ title, techIcons }: SectionTechProps) => {
-  console.log(techIcons);
-
   return (
     <S.Wrapper>
       <Container>
