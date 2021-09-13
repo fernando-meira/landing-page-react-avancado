@@ -8,13 +8,19 @@ type ButtonProps = {
   label: string;
 };
 
-type techIconsProps = {
+type TechIconsProps = {
   title: string;
   icon: ImageProps;
 };
 
-type conceptsProps = {
+type ConceptsProps = {
   title: string;
+};
+
+type ModulesProps = {
+  title: string;
+  subtitle: string;
+  description: string;
 };
 
 export type HeaderProps = {
@@ -32,18 +38,24 @@ export type SectionAboutProjectProps = {
 
 export type SectionConceptsProps = {
   title: string;
-  concepts: conceptsProps[];
+  concepts: ConceptsProps[];
 };
 
 export type SectionTechProps = {
   title: string;
-  techIcons: techIconsProps[];
+  techIcons: TechIconsProps[];
+};
+
+export type SectionModulesProps = {
+  title: string;
+  modules: ModulesProps[];
 };
 
 export type LandingPageProps = {
   logo: ImageProps;
   header: HeaderProps;
   sectionTech: SectionTechProps;
+  sectionModules: SectionModulesProps;
   sectionConcepts: SectionConceptsProps;
   sectionAboutProject: SectionAboutProjectProps;
 };
