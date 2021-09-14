@@ -21,6 +21,7 @@ import SectionAboutProject from 'components/SectionAboutProject';
 const Index = ({
   logo,
   header,
+  pricingBox,
   sectionTech,
   sectionAgenda,
   sectionModules,
@@ -34,7 +35,7 @@ const Index = ({
     <SectionConcepts {...sectionConcepts} />
     <SectionModules {...sectionModules} />
     <SectionAgenda {...sectionAgenda} />
-    <PricingBox />
+    <PricingBox {...pricingBox} />
     <SectionAboutUs />
     <SectionReviews />
     <SectionFaq />
@@ -45,8 +46,6 @@ const Index = ({
 
 export const getStaticProps: GetStaticProps = async () => {
   const { landingPage } = await client.request(GET_LANDING_PAGE);
-
-  console.log(landingPage);
 
   return {
     props: {
