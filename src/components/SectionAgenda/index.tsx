@@ -6,17 +6,12 @@ import { SectionAgendaProps } from 'types/api';
 
 import * as S from './styles';
 
-interface ISectionAgenda {
-  agenda: SectionAgendaProps;
-}
-
-const SectionAgenda = ({ agenda }: ISectionAgenda) => {
-  console.log(agenda.description);
+const SectionAgenda = ({ title, description }: SectionAgendaProps) => {
   return (
     <Container id="agenda">
-      <Heading reverseColor>{agenda.title}</Heading>
+      <Heading reverseColor>{title}</Heading>
 
-      <S.Text dangerouslySetInnerHTML={{ __html: agenda.description }} />
+      <S.Text dangerouslySetInnerHTML={{ __html: description }} />
     </Container>
   );
 };

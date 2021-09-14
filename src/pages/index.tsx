@@ -33,7 +33,7 @@ const Index = ({
     <SectionTech {...sectionTech} />
     <SectionConcepts {...sectionConcepts} />
     <SectionModules {...sectionModules} />
-    <SectionAgenda agenda={sectionAgenda} />
+    <SectionAgenda {...sectionAgenda} />
     <PricingBox />
     <SectionAboutUs />
     <SectionReviews />
