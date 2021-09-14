@@ -1,11 +1,17 @@
-export type ImageProps = {
-  url: string;
-  alternativeText: string;
-};
-
 type ButtonProps = {
   url: string;
   label: string;
+};
+
+type AuthorsProps = {
+  id: string;
+  name: string;
+  role: string;
+  photo: ImageProps;
+  socialLinks: {
+    url: string;
+    title: string;
+  };
 };
 
 type TechIconsProps = {
@@ -21,6 +27,11 @@ type ModulesProps = {
   title: string;
   subtitle: string;
   description: string;
+};
+
+export type ImageProps = {
+  url: string;
+  alternativeText: string;
 };
 
 export type HeaderProps = {
@@ -51,11 +62,51 @@ export type SectionModulesProps = {
   modules: ModulesProps[];
 };
 
+export type SectionAgendaProps = {
+  title: string;
+  description: string;
+};
+
+export type PricingBoxProps = {
+  benefits: string;
+  totalPrice: number;
+  button: ButtonProps;
+  priceInstallment: number;
+  numberInstallments: number;
+};
+
+export type SectionAboutUsProps = {
+  title: string;
+  authors: AuthorsProps[];
+};
+
+export type SectionReviewsProps = {
+  title: string;
+  reviews: {
+    name: string;
+    text: string;
+    image: ImageProps;
+  };
+};
+
+export type SectionFaqProps = {
+  title: string;
+  questions: {
+    answer: string;
+    question: string;
+  };
+};
+
 export type LandingPageProps = {
   logo: ImageProps;
   header: HeaderProps;
+  sectionFaq: SectionFaqProps;
+  pricingBox: PricingBoxProps;
   sectionTech: SectionTechProps;
+  sectionAgenda: SectionAgendaProps;
   sectionModules: SectionModulesProps;
+  sectionAboutUs: SectionAboutUsProps;
+  sectionReviews: SectionReviewsProps;
   sectionConcepts: SectionConceptsProps;
   sectionAboutProject: SectionAboutProjectProps;
 };
