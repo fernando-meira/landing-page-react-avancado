@@ -21,9 +21,7 @@ const SectionAboutProject = ({
           <div>
             <Heading>{title}</Heading>
 
-            <div dangerouslySetInnerHTML={{ __html: description }} />
-
-            {/* <S.Text dangerouslySetInnerHTML={{ __html: description }} /> */}
+            <S.Text dangerouslySetInnerHTML={{ __html: description }} />
           </div>
         </S.Container>
       </Container>
