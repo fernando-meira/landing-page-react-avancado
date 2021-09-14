@@ -29,6 +29,12 @@ type ModulesProps = {
   description: string;
 };
 
+export type ReviewsProps = {
+  name: string;
+  text: string;
+  image: ImageProps;
+};
+
 export type ImageProps = {
   url: string;
   alternativeText: string;
@@ -82,11 +88,7 @@ export type SectionAboutUsProps = {
 
 export type SectionReviewsProps = {
   title: string;
-  reviews: {
-    name: string;
-    text: string;
-    image: ImageProps;
-  };
+  reviews: ReviewsProps[];
 };
 
 export type SectionFaqProps = {
