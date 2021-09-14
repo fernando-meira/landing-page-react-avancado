@@ -9,6 +9,20 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     label
   }
 
+  fragment authors on Author {
+    id
+    name
+    role
+    description
+    photo {
+      ...imageData
+    }
+    socialLinks {
+      url
+      title
+    }
+  }
+
   fragment logo on LandingPage {
     logo {
       ...imageData
@@ -70,6 +84,57 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment SectionAgenda on LandingPage {
+    sectionAgenda {
+      title
+      description
+    }
+  }
+
+  fragment PricingBox on LandingPage {
+    pricingBox {
+      totalPrice
+      numberInstallments
+      priceInstallment
+      benefits
+      button {
+        ...button
+      }
+    }
+  }
+
+  fragment SectionAboutUs on LandingPage {
+    sectionAboutUs {
+      title
+      authors {
+        ...authors
+      }
+    }
+  }
+
+  fragment SectionReviews on LandingPage {
+    sectionReviews {
+      title
+      reviews {
+        name
+        text
+        image {
+          ...imageData
+        }
+      }
+    }
+  }
+
+  fragment SectionFaq on LandingPage {
+    sectionFaq {
+      title
+      questions {
+        question
+        answer
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
@@ -83,6 +148,16 @@ const GET_LANDING_PAGE = /* GraphQL */ `
       ...SectionConcepts
 
       ...SectionModules
+
+      ...SectionAgenda
+
+      ...PricingBox
+
+      ...SectionAboutUs
+
+      ...SectionReviews
+
+      ...SectionFaq
     }
   }
 `;
