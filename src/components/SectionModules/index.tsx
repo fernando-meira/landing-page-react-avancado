@@ -8,8 +8,6 @@ import { SectionModulesProps } from 'types/api';
 import * as S from './styles';
 
 const SectionModules = ({ title, modules }: SectionModulesProps) => {
-  console.log(modules);
-
   return (
     <Container>
       <Heading reverseColor>{title}</Heading>
