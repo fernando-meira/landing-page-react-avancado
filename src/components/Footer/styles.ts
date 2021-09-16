@@ -19,6 +19,8 @@ export const Wrapper = styled.footer`
     `}
 
     a {
+      margin-left: 1rem;
+
       color: ${theme.colors.primary};
       text-decoration: none;
       border-bottom: 1px solid ${theme.colors.primary};
