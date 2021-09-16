@@ -8,6 +8,15 @@ type SocialLinksProps = {
   title: string;
 };
 
+export type FooterAuthor = {
+  name: string;
+  socialLinks: Pick<SocialLinksProps, 'url'>[];
+};
+
+export type FooterAuthorsProps = {
+  authors: FooterAuthor[];
+};
+
 export type AuthorsProps = {
   id?: string;
   name: string;
@@ -24,6 +33,11 @@ type TechIconsProps = {
 
 type ConceptsProps = {
   title: string;
+};
+
+type QuestionProps = {
+  answer: string;
+  question: string;
 };
 
 type ModulesProps = {
@@ -96,15 +110,13 @@ export type SectionReviewsProps = {
 
 export type SectionFaqProps = {
   title: string;
-  questions: {
-    answer: string;
-    question: string;
-  };
+  questions: QuestionProps[];
 };
 
 export type LandingPageProps = {
   logo: ImageProps;
   header: HeaderProps;
+  authors: FooterAuthorsProps;
   sectionFaq: SectionFaqProps;
   pricingBox: PricingBoxProps;
   sectionTech: SectionTechProps;
