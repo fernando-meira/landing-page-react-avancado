@@ -3,15 +3,18 @@ type ButtonProps = {
   label: string;
 };
 
-type AuthorsProps = {
-  id: string;
+type SocialLinksProps = {
+  url: string;
+  title: string;
+};
+
+export type AuthorsProps = {
+  id?: string;
   name: string;
   role: string;
   photo: ImageProps;
-  socialLinks: {
-    url: string;
-    title: string;
-  };
+  description: string;
+  socialLinks: SocialLinksProps[];
 };
 
 type TechIconsProps = {
