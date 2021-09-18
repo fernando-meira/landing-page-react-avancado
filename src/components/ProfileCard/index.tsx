@@ -31,7 +31,7 @@ const ProfileCard: React.FC<AuthorsProps> = ({
       {socialLinks.map((item) => (
         <S.Link key={item.url}>
           <a href={item.url} title={item.title}>
-            {icons[item.title]}
+            {icons[item.title.toLowerCase()]}
           </a>
         </S.Link>
       ))}
